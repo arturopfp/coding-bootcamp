@@ -1,0 +1,236 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 375px;
+    height: 667px;
+
+    font-family: 'Inter', sans-serif;
+
+    @media(min-width: 900px) {
+        width: 1440px;
+        height: 830px;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    @media(min-width: 900px) {
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        border: 1px solid red;
+
+        height: 100%;
+        width: 100%;
+    }
+
+    .slider-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 327px;
+        height: 308px;
+
+        margin-top: 24px;
+
+        background-image: url('../images/pattern-bg.svg');
+        background-size: cover;
+
+        @media(min-width: 900px) {
+            order: 2;
+            
+            position: absolute;
+            top: 113px;
+            left: 735px;
+
+            margin-top: 0px;
+            background-position: center;
+
+            width: 540px;
+            height: 540px;
+
+        }
+        
+        .slide {
+            display: none;
+        
+
+            .profile-pic {
+                width: 254px;
+                height: 254px;
+
+                @media(min-width: 900px) {
+                    width: 540px;
+                    height: 540px;
+                }
+            }
+        }
+
+        .display {
+            display: block;
+        }
+
+        .arrows-container {
+            position: absolute;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            top: 287px;
+            left: 148px;
+
+            width: 80px;
+            height: 40px;
+
+            background: #FFFFFF;
+            box-shadow: 0px 15px 20px -10px rgba(36, 36, 113, 0.0991313);
+            border-radius: 28px;
+
+            @media(min-width: 900px) {
+                position: absolute;
+
+                width: 112px;
+                height: 56px;
+
+                top: 512px;
+                left: 62px;
+            }
+        }
+
+        .arrows-container:hover {
+            cursor: pointer;
+        }
+ 
+    }
+
+    .txt-container {
+        display: none;
+
+        width: 311px;
+        height: 228px;
+
+        margin-top: 32px;
+
+        background-image: url('../images/pattern-quotes.svg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+
+        @media(min-width: 900px) {
+            width: 635px;
+            height: 354px;
+
+            position: absolute;
+            top: 214px;
+            left: 165px;
+
+            margin-top: 0px;
+
+            background-position-x: 10%;
+
+            z-index: 1;
+        }
+
+
+        .txt {
+            height: 144px;
+
+            margin-top: 25px;
+
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+
+            text-align: center;
+
+            color: #202047;
+
+            @media(min-width: 900px) {
+                width: 635px;
+                height: 220px;
+
+                margin-top: 64px;
+
+                font-size: 32px;
+                line-height: 44px;
+
+                text-align: left;
+            }
+
+        }
+
+        .author-container {
+            margin-top: 19px;
+
+            @media(min-width: 900px) {
+                display: flex;
+
+                align-items: center;
+                justify-content: space-between;
+
+                width: auto;
+                min-width: 265px;
+                max-width: 405px;
+                height: 38px;
+
+            }
+
+            .author {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 20px;
+
+                text-align: center;
+
+                color: #202047;
+
+                @media(min-width: 900px) {
+                    font-size: 20px;
+                    line-height: 38px;
+                }
+            }
+
+            .job {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 20px;
+
+                text-align: center;
+
+                color: #B9B9CE;
+
+                @media(min-width: 900px) {
+                    font-size: 20px;
+                    line-height: 38px;
+                }
+            }
+        }
+    }
+
+    .curve {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .display {
+        display: block;
+    }
+}
